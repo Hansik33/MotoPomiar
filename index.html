@@ -2,17 +2,101 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MotoPomiar</title>
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/icons/motopomiar.png" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="./assets/icons/motopomiar.png" alt="Logo MotoPomiar" class="brand-logo" width="56" height="56" />
+            <div class="brand-copy">
+                <p class="eyebrow">Egzamin praktyczny</p>
+                <h1>MotoPomiar</h1>
+            </div>
+        </div>
 
-    <h1>MotoPomiar</h1>
+        <div class="connection connection--online">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <span>Połączono z ESP</span>
+        </div>
+    </header>
 
-    <script src="./js/app.js"></script>
+    <main class="app-shell">
+        <section class="exam-card" aria-labelledby="exam-task-title">
+            <p class="section-label">Aktywne zadanie</p>
+            <h2 id="exam-task-title" class="exam-title">Slalom szybki</h2>
+            <p class="exam-description">
+                Przejazd przez bramkę początkową, slalom pomiędzy 3 pachołkami i wyjazd przez bramkę końcową.
+                Średnia prędkość przejazdu nie może być mniejsza niż 30 km/h.
+            </p>
+
+            <div class="exam-meta">
+                <div class="meta-chip">Kategoria A</div>
+                <div class="meta-chip">Próg: min. 30 km/h</div>
+                <div class="meta-chip">Pomiar odcinkowy</div>
+            </div>
+        </section>
+
+        <section class="measurement-card" aria-labelledby="measurement-title">
+            <div class="measurement-header">
+                <div>
+                    <p class="section-label">Wynik pomiaru</p>
+                    <h2 id="measurement-title">Średnia prędkość przejazdu</h2>
+                </div>
+                <span class="result-pill result-pill--ok">Zaliczone</span>
+            </div>
+
+            <div class="measurement-readout">
+                <div class="readout-block readout-block--primary">
+                    <p class="readout-label">Zmierzono</p>
+                    <p class="readout-value">32.4 <span>km/h</span></p>
+                </div>
+
+                <div class="readout-block">
+                    <p class="readout-label">Wymagane minimum</p>
+                    <p class="readout-value readout-value--secondary">30.0 <span>km/h</span></p>
+                </div>
+            </div>
+
+            <p class="result-description result-description--ok">
+                Średnia prędkość spełnia warunek zadania egzaminacyjnego.
+            </p>
+        </section>
+
+        <section class="details-grid" aria-label="Szczegóły próby">
+            <article class="detail-card">
+                <p class="card-label">Tryb pomiaru</p>
+                <p class="card-value card-value--small">Między dwiema bramkami</p>
+            </article>
+
+            <article class="detail-card">
+                <p class="card-label">Status próby</p>
+                <p class="card-value card-value--small">Zakończona</p>
+            </article>
+
+            <article class="detail-card">
+                <p class="card-label">Bramka wejściowa</p>
+                <p class="card-value card-value--small">01:18:22</p>
+            </article>
+
+            <article class="detail-card">
+                <p class="card-label">Bramka wyjściowa</p>
+                <p class="card-value card-value--small">01:18:25</p>
+            </article>
+        </section>
+
+        <section class="actions" aria-label="Akcje">
+            <button class="btn btn-primary" type="button">Nowy pomiar</button>
+            <button class="btn btn-secondary" type="button">Zmień zadanie</button>
+        </section>
+    </main>
 </body>
 
 </html>
