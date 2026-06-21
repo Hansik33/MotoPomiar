@@ -50,13 +50,13 @@
                     <p class="section-label">Wynik pomiaru</p>
                     <h2 id="measurement-title">Średnia prędkość przejazdu</h2>
                 </div>
-                <span class="result-pill result-pill--ok">Zaliczone</span>
+                <span class="result-pill result-pill--ok" data-result-pill>Zaliczone</span>
             </div>
 
             <div class="measurement-readout">
                 <div class="readout-block readout-block--primary">
                     <p class="readout-label">Zmierzono</p>
-                    <p class="readout-value">32.4 <span>km/h</span></p>
+                    <p class="readout-value" data-speed>32.4 <span>km/h</span></p>
                 </div>
 
                 <div class="readout-block">
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <p class="result-description result-description--ok">
+            <p class="result-description result-description--ok" data-result-text>
                 Średnia prędkość spełnia warunek zadania egzaminacyjnego.
             </p>
         </section>
@@ -78,17 +78,17 @@
 
             <article class="detail-card">
                 <p class="card-label">Status próby</p>
-                <p class="card-value card-value--small">Zakończona</p>
+                <p class="card-value card-value--small" data-status>Zakończona</p>
             </article>
 
             <article class="detail-card">
                 <p class="card-label">Bramka wejściowa</p>
-                <p class="card-value card-value--small">01:18:22</p>
+                <p class="card-value card-value--small" data-entry>—</p>
             </article>
 
             <article class="detail-card">
                 <p class="card-label">Bramka wyjściowa</p>
-                <p class="card-value card-value--small">01:18:25</p>
+                <p class="card-value card-value--small" data-exit>—</p>
             </article>
         </section>
 
@@ -97,6 +97,8 @@
             <button class="btn btn-secondary" type="button">Zmień zadanie</button>
         </section>
     </main>
+
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
