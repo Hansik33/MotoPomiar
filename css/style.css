@@ -143,6 +143,18 @@ p {
   background: var(--color-success);
 }
 
+.connection--online .connection-dot {
+  background: var(--color-success);
+}
+
+.connection--offline .connection-dot {
+  background: var(--color-danger);
+}
+
+.connection--offline {
+  border-color: rgba(166, 61, 77, 0.2);
+}
+
 .app-shell {
   max-width: var(--content-width);
   margin: 0 auto;
